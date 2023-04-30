@@ -14,17 +14,16 @@ public class LabelBl {
 
     public LabelBl() {
         this.labels = new ArrayList<>();
-        this.labels.add(new LabelDto(1, "Universidad"));
-        this.labels.add(new LabelDto(2, "Ocio"));
-        this.labels.add(new LabelDto(3, "Personal"));
+        this.labels.add(new LabelDto("1", "Universidad"));
+        this.labels.add(new LabelDto("2", "Ocio"));
+        this.labels.add(new LabelDto("3", "Personal"));
     }
 
     public List<LabelDto> getAllLabels() {
         return labels;
     }
 
-    public LabelDto getLabelById(Integer id) {
-
+    public LabelDto getLabelById(String id) {
         //Buscamos el elemento en la lista
         LabelDto label = labels.stream()
                 .filter(t -> t.getLabelId().equals(id))
@@ -33,7 +32,7 @@ public class LabelBl {
         return label;
     }
 
-    public LabelDto updateLabelById(Integer idLabel,  LabelDto newLabel) {
+    public LabelDto updateLabelById(String idLabel,  LabelDto newLabel) {
         //Buscamos el elemento en la lista
         LabelDto label = labels.stream()
                 .filter(t -> t.getLabelId().equals(idLabel))
@@ -46,12 +45,22 @@ public class LabelBl {
     public void createLabel(LabelDto label) {
         // Obtenemos el ultimo elemento de la lista  y le sumamos 1 para obtener el id
         // del nuevo elemento
-        if (labels.size() > 0) {
-            LabelDto lastLabel = labels.get(labels.size() - 1);
-            label.setLabelId(lastLabel.getLabelId() + 1);
-        } else {
-            label.setLabelId(1);
-        }
+//        if (labels.size() > 0) {
+//            LabelDto lastLabel = labels.get(labels.size() - 1);
+//            label.setLabelId(lastLabel.getLabelId() + 1);
+//        } else {
+//            label.setLabelId("1");
+//        }
         labels.add(label);
     }
+
+    public void deleteLabelById(String idLabel) {
+        //Buscamos el elemento en la lista y si no esta no hace nada
+        LabelDto label = labels.stream()
+                .filter(t -> t.getLabelId().equals(idLabel))
+                .findFirst()
+                .orElse(null);
+        labels.remove(label);
+    }
+
 }

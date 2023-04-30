@@ -1,22 +1,22 @@
 package bo.edu.ucb.todo.dto;
 
 public  class LabelDto {
-    private Integer labelId;
+    private String labelId;
     private String name;
 
     public LabelDto() {
     }
 
-    public LabelDto(Integer labelId, String name) {
+    public LabelDto(String labelId, String name) {
         this.labelId = labelId;
         this.name = name;
     }
 
-    public Integer getLabelId() {
+    public String getLabelId() {
         return this.labelId;
     }
 
-    public void setLabelId(Integer labelId) {
+    public void setLabelId(String labelId) {
         this.labelId = labelId;
     }
 

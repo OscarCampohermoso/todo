@@ -3,20 +3,28 @@ package bo.edu.ucb.todo.dto;
 import java.util.*;
 
 public class TaskDto {
-    private Integer taskId;
+    private String taskId;
     private String description;
     private Date date;
-    private List<Integer> labelIds;
+    private boolean isDone;
+    private LabelDto label;
 
     public TaskDto() {
     }
 
+    public TaskDto(String taskId, String description, Date date, boolean isDone, LabelDto label) {
+        this.taskId = taskId;
+        this.description = description;
+        this.date = date;
+        this.isDone = isDone;
+        this.label = label;
+    }
 
-    public Integer getTaskId() {
+    public String getTaskId() {
         return this.taskId;
     }
 
-    public void setTaskId(Integer taskId) {
+    public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
 
@@ -36,24 +44,30 @@ public class TaskDto {
         this.date = date;
     }
 
-    public List<Integer> getLabelIds() {
-        return this.labelIds;
+    public boolean getIsDone() {
+        return this.isDone;
     }
 
-    public void setLabelIds(List<Integer> labelIds) {
-        this.labelIds = labelIds;
+    public void setIsDone(boolean isDone) {
+        this.isDone = isDone;
     }
 
+    public LabelDto getLabel() {
+        return this.label;
+    }
+
+    public void setLabel(LabelDto label) {
+        this.label = label;
+    }
 
     @Override
     public String toString() {
         return "{" +
-            " taskId='" + getTaskId() + "'" +
-            ", description='" + getDescription() + "'" +
-            ", date='" + getDate() + "'" +
-            ", labelIds='" + getLabelIds() + "'" +
-            "}";
+                " taskId='" + getTaskId() + "'" +
+                ", description='" + getDescription() + "'" +
+                ", date='" + getDate() + "'" +
+                ", isDone='" + getIsDone() + "'" +
+                ", label='" + getLabel() + "'" +
+                "}";
     }
-
-
 }

@@ -1,29 +1,32 @@
 GET http://localhost:9999/api/v1/label
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cudWNiLmVkdS5ibyIsIm5hbWUiOiJKdWFuIFBlcmV6IiwidHlwZSI6IkFVVEgiLCJleHAiOjE2ODI0Njg3MzUsInVzZXJJZCI6MTAwfQ.MU8q2NkqCgtGMxQGHggcuBR8J9tlSSCNQBJa7q3CTsk
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cudWNiLmVkdS5ibyIsIm5hbWUiOiJKdWFuIFBlcmV6IiwidHlwZSI6IkFVVEgiLCJleHAiOjE2ODI4OTEyMzUsInVzZXJJZCI6MTAwfQ.XfJfs8BDJ99roKBJGwMv3yFLZKUDRhMI1n4SY1EwTdU
 
 ###
 GET http://localhost:9999/api/v1/label/2
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cudWNiLmVkdS5ibyIsIm5hbWUiOiJKdWFuIFBlcmV6IiwidHlwZSI6IkFVVEgiLCJleHAiOjE2ODI0Njg3MzUsInVzZXJJZCI6MTAwfQ.MU8q2NkqCgtGMxQGHggcuBR8J9tlSSCNQBJa7q3CTsk
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cudWNiLmVkdS5ibyIsIm5hbWUiOiJKdWFuIFBlcmV6IiwidHlwZSI6IkFVVEgiLCJleHAiOjE2ODI4OTIyNzYsInVzZXJJZCI6MTAwfQ.QCYIz1oIXJP-Jbr1o2UtHAvaBPzU_7ELqCk2DTUqbyw
 
 ###
 POST http://localhost:9999/api/v1/label
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cudWNiLmVkdS5ibyIsIm5hbWUiOiJKdWFuIFBlcmV6IiwidHlwZSI6IkFVVEgiLCJleHAiOjE2ODI0Njg3MzUsInVzZXJJZCI6MTAwfQ.MU8q2NkqCgtGMxQGHggcuBR8J9tlSSCNQBJa7q3CTsk
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cudWNiLmVkdS5ibyIsIm5hbWUiOiJKdWFuIFBlcmV6IiwidHlwZSI6IkFVVEgiLCJleHAiOjE2ODI4OTEyMzUsInVzZXJJZCI6MTAwfQ.XfJfs8BDJ99roKBJGwMv3yFLZKUDRhMI1n4SY1EwTdU
 
 {
-  "name": "Hobby",
-  "date": "2019-01-01T00:00:00Z"
+  "labelId": "2",
+  "name": "Hobby"
 }
 
 
 ###
-PUT http://localhost:9999/api/v1/label/4
+PUT http://localhost:9999/api/v1/label/3
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cudWNiLmVkdS5ibyIsIm5hbWUiOiJKdWFuIFBlcmV6IiwidHlwZSI6IkFVVEgiLCJleHAiOjE2ODI0Njg3MzUsInVzZXJJZCI6MTAwfQ.MU8q2NkqCgtGMxQGHggcuBR8J9tlSSCNQBJa7q3CTsk
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cudWNiLmVkdS5ibyIsIm5hbWUiOiJKdWFuIFBlcmV6IiwidHlwZSI6IkFVVEgiLCJleHAiOjE2ODI4OTIyNzYsInVzZXJJZCI6MTAwfQ.QCYIz1oIXJP-Jbr1o2UtHAvaBPzU_7ELqCk2DTUqbyw
 
 {
-  "name": "Etiqueta actualizada",
-  "date": "2019-01-01T00:00:00Z"
+  "name": "Etiqueta actualizada"
 }
+
+###
+DELETE http://localhost:9999/api/v1/label/2
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ3d3cudWNiLmVkdS5ibyIsIm5hbWUiOiJKdWFuIFBlcmV6IiwidHlwZSI6IkFVVEgiLCJleHAiOjE2ODI4ODMzOTYsInVzZXJJZCI6MTAwfQ.bOFKJiiitS7Ap7VJssHR8VKO_iunMgDmdjs02PwLRbE
